@@ -11,8 +11,15 @@ namespace ConsoleApp3_4
         static void Main(string[] args)
         {
             Console.WriteLine("Введите размер массива");
-            
-            int lenght = Convert.ToInt32(Console.ReadLine());
+            int lenght = 0;
+            try
+            {
+                lenght = Convert.ToInt32(Console.ReadLine());
+            }
+            catch
+            {
+                Console.WriteLine("Не число");
+            }
             object[] array = new object[lenght];
             Task taskarray = new Task(() =>
             {
